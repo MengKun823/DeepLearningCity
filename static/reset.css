@@ -1,0 +1,78 @@
+/*	我就选我，不一样的烟火
+	维护zxf
+*/
+/* 内盒模型 */
+* {
+	box-sizing: border-box;
+}
+
+
+/*清除外边距*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, figure, nav, footer, header, /*结构元素*/
+dl, dt, dd, ul, ol, li, /*列表元素*/
+fieldset, lengend, button, input, textarea, /*表单元素*/
+th, td, tr, /*表格元素*/
+pre /*文本格式元素*/ {
+    margin: 0;
+}
+
+
+/*清除内边距*/
+ul, ol, menu td{
+    padding: 0;
+}
+
+
+/*重置列表元素*/
+ul, ol {
+    list-style: none;
+}
+
+
+/*将字体扶正*/
+address, cite, dfn, em, var {
+    font-style: normal;
+}
+
+
+/*清下划线*/
+a {
+    text-decoration: none;
+    color: black;
+    -webkit-tap-highlight-color: transparent;
+}
+/*鼠标略过a标签，显示下划线*/
+/*a:hover {
+    text-decoration: underline;
+}*/
+
+
+/*清浮动*/
+.clearFloat:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.clearFloat {
+	zoom: 1;
+}
+
+/* IE下img清边框和留白 */
+/*img {
+	border: none;
+	display: block;
+}*/
+
+html {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+body {
+    font: .16rem "微软雅黑", "华文细黑", Arial, Helvetica, sans-serif;
+    max-width: 720px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
