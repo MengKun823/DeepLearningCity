@@ -1,187 +1,199 @@
 <!DOCTYPE html>
 <html lang="cn">
 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>back</title>
-		<link rel="stylesheet" type="text/css" href="../static/reset.css" />
-		<script src="../static/rem.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../static/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../static/shadeShare.js" type="text/javascript" charset="utf-8"></script>
-	</head>
-	<style type="text/css">
-		.back {
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			right: 0;
-			left: 0;
-			background-color: #3170FF;
-			text-align: center;
-			overflow: auto;
-		}
-		.usersBox{
-			width: 100%;
-			height: 4.43rem;
-			background-color: #414143;
-			position: absolute;
-		}
-		#user{
-			display: inline-block;
-			width: 1.52rem;
-			height: 1.52rem;
-			border: 0.1rem solid #3170FF;
-			border-radius: 50%;
-			position: relative;
-			top: 0.62rem;
-			z-index: 10;
-		}
-		#userName{
-			display: block;
-			width: 100%;
-			height: 0.4rem;
-			font-size: 0.3rem;
-			color: #FFFFFF;
-			position: absolute;
-			top: 2.3rem;
-			z-index: 10;
-		}
-		.people{
-			display: inline-block;
-			width: 0.67rem;
-			height: 1.9rem;
-			background: url(../static/img/home/people.png) no-repeat;
-			background-size: 100%;
-			position: relative;
-			top: 3.3rem;
-			z-index: 8;
-		}
-		.bgUser{
-			width: 100%;
-			height: 100%;
-			position: relative;
-			top: -1.38rem;
-			z-index: 7;
-		}
-		.scoreBox{
-			width: 100%;
-			height: 3.15rem;
-			background-color: #3170FF;
-			position: absolute;
-			top: 4.45rem;
-			z-index: 6;
-			padding-top: 0.89rem;
-		}
-		.score{
-			width: 100%;
-			height: 2.8rem;
-			background: url(../static/img/back/score.png) no-repeat;
-			background-size: 100%;
-			z-index: 6;
-		}
-		.grade{
-			width: 100%;
-			height: 8.65rem;
-			background-color: #fff;
-			position: absolute;
-			top: 7.62rem;
-			z-index: 5;
-			text-align: center;
-		}
-		#hierarchy{
-			display: inline-block;
-			width: 5.46rem;
-			height: 3.06rem;
-			background: url(../static/img/back/grade_min.png) no-repeat;
-			background-size: 100%;
-			margin-top: 0.65rem;
-			z-index: 5;
-		}
-		#qrCode{
-			width: 100%;
-			height: 7.17rem;
-			background: url(../static/img/back/QRcode.png) no-repeat;
-			background-size: 100%;
-			position: relative;
-			top: 9.83rem;
-			z-index: 10;
-		}
-		.shadeVal {
-			display: inline-block;
-			width: 2.89rem;
-			height: .85rem;
-			background: url(../static/img/back/shareBtn_up.png) no-repeat;
-			background-size: 100%;
-			position: relative;
-			top: 8.25rem;
-			z-index: 15;
-			margin-bottom: 0.63rem;
-		}
-		.shadeBtn{
-			display: inline-block;
-			width: 2.89rem;
-			height: .85rem;
-			background: url(../static/img/back/shareBtn_down.png) no-repeat;
-			background-size: 100%;
-			margin-top: 0.15rem;
-			z-index: 15;
-		}
-	</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>back</title>
+    <link rel="stylesheet" type="text/css" href="../static/reset.css" />
+    <script src="../static/rem.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../static/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../static/shadeShare.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<style type="text/css">
+    .back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: #3170FF;
+        text-align: center;
+        overflow: auto;
+    }
+    
+    .usersBox {
+        width: 100%;
+        height: 4.43rem;
+        background-color: #414143;
+        position: absolute;
+    }
+    
+    #user {
+        display: inline-block;
+        width: 1.52rem;
+        height: 1.52rem;
+        border: 0.1rem solid #3170FF;
+        border-radius: 50%;
+        position: relative;
+        top: 0.62rem;
+        z-index: 10;
+    }
+    
+    #userName {
+        display: block;
+        width: 100%;
+        height: 0.4rem;
+        font-size: 0.3rem;
+        color: #FFFFFF;
+        position: absolute;
+        top: 2.3rem;
+        z-index: 10;
+    }
+    
+    .people {
+        display: inline-block;
+        width: 0.67rem;
+        height: 1.9rem;
+        background: url(../static/img/home/people.png) no-repeat;
+        background-size: 100%;
+        position: relative;
+        top: 3.3rem;
+        z-index: 8;
+    }
+    
+    .bgUser {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: -1.38rem;
+        z-index: 7;
+    }
+    
+    .scoreBox {
+        width: 100%;
+        height: 3.15rem;
+        background-color: #3170FF;
+        position: absolute;
+        top: 4.45rem;
+        z-index: 6;
+        padding-top: 0.89rem;
+    }
+    
+    .score {
+        width: 100%;
+        height: 2.8rem;
+        background: url(../static/img/back/score.png) no-repeat;
+        background-size: 100%;
+        z-index: 6;
+    }
+    
+    .grade {
+        width: 100%;
+        height: 8.65rem;
+        background-color: #fff;
+        position: absolute;
+        top: 7.62rem;
+        z-index: 5;
+        text-align: center;
+    }
+    
+    #hierarchy {
+        display: inline-block;
+        width: 5.46rem;
+        height: 3.06rem;
+        background: url(../static/img/back/grade_min.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0.65rem;
+        z-index: 5;
+    }
+    
+    #qrCode {
+        width: 100%;
+        height: 7.17rem;
+        background: url(../static/img/back/QRcode.png) no-repeat;
+        background-size: 100%;
+        position: relative;
+        top: 9.83rem;
+        z-index: 10;
+    }
+    
+    .shadeVal {
+        display: inline-block;
+        width: 2.89rem;
+        height: .85rem;
+        background: url(../static/img/back/shareBtn_up.png) no-repeat;
+        background-size: 100%;
+        position: relative;
+        top: 8.25rem;
+        z-index: 15;
+        margin-bottom: 0.63rem;
+    }
+    
+    .shadeBtn {
+        display: inline-block;
+        width: 2.89rem;
+        height: .85rem;
+        background: url(../static/img/back/shareBtn_down.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0.15rem;
+        z-index: 15;
+    }
+</style>
 
-	<body>
-		<div class="back">
-			<!--用户信息-->
-			<div class="usersBox">
-				<div id="user">
-				</div>
-				<span id="userName">
+<body>
+    <div class="back">
+        <!--用户信息-->
+        <div class="usersBox">
+            <div id="user">
+            </div>
+            <span id="userName">
 					documentdTest
 				</span>
-				<img src="../static/img/back/backHeader.png" class="bgUser"/>
-			</div>
-			<!--人图片-->
-			<div class="people">
-			</div>
-			<!--分数-->
-			<div class="scoreBox">
-				<div class="score">
-					
-				</div>
-			</div>
-			<!--等级-->
-			<div class="grade">
-				<div id="hierarchy">
-				</div>
-			</div>
-			<!--二维码-->
-			<div id="qrCode">
-			</div>
-			<!--分享按钮-->
-			<span class="shadeVal"></span>
-		</div>
-	</body>
-	<script type="text/javascript">
-		$(function () {
-//			点击按钮事件
-            $('.shadeVal').on('touchstart', function(ev) {
-				ev.preventDefault();
-				$('.shadeVal').addClass('shadeBtn');
-			});
-			
-			$('.shadeVal').on('touchend', function(ev) {
-				ev.preventDefault();
-				$('.shadeVal').removeClass('shadeBtn');
-				//分享遮罩页面事件
-                $(this).jqShade();
-//	            $(".layerImg").on("click", function () {
-//			        $(this).jqShade("destroy");
-//			    });
-			});
-      })
-	</script>
+            <img src="../static/img/back/backHeader.png" class="bgUser" />
+        </div>
+        <!--人图片-->
+        <div class="people">
+        </div>
+        <!--分数-->
+        <div class="scoreBox">
+            <div class="score">
+
+            </div>
+        </div>
+        <!--等级-->
+        <div class="grade">
+            <div id="hierarchy">
+            </div>
+        </div>
+        <!--二维码-->
+        <div id="qrCode">
+        </div>
+        <!--分享按钮-->
+        <span class="shadeVal"></span>
+    </div>
+</body>
+<script type="text/javascript">
+    $(function() {
+        //			点击按钮事件
+        $('.shadeVal').on('touchstart', function(ev) {
+            ev.preventDefault();
+            $('.shadeVal').addClass('shadeBtn');
+        });
+
+        $('.shadeVal').on('touchend', function(ev) {
+            ev.preventDefault();
+            $('.shadeVal').removeClass('shadeBtn');
+            //分享遮罩页面事件
+            $(this).jqShade();
+            //	            $(".layerImg").on("click", function () {
+            //			        $(this).jqShade("destroy");
+            //			    });
+        });
+    })
+</script>
 
 </html>
