@@ -8,63 +8,76 @@
     <title>Loading</title>
     <link rel="stylesheet" type="text/css" href="../static/reset.css" />
     <script src="../static/rem.js" type="text/javascript" charset="utf-8"></script>
-    <!-- <script src="../static/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script> -->
+    <script src="../static/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <style type="text/css">
     body {
-        background: #3170FF;
-    }
-    
-    .frame {
-        width: 100%;
-        height: 100%;
-        position: relative;
+    	width: 100%;
+    	height: 100%;
+        background-color:#3170FF;
         text-align: center;
     }
-    
-    .cont {
-        margin-top: 0.42rem;
-        display: inline-block;
-        width: 6.37rem;
-        height: 6.65rem;
-        background: #fff;
-        z-index: 3;
+    .cont{
+    	display: inline-block;
+    	margin-top: 0.42rem;
+    	width: 6.36rem;
+    	height: 6rem;
+    	background-color: #FFFFFF;
     }
-    
-    #textImg {
-        display: inline-block;
-        width: 5rem;
-        height: 3rem;
-        position: relative;
-        top: 1.03rem;
-        background: url(../static/img/loading/textexplain.png) no-repeat;
-        background-size: 100%;
-        z-index: 5;
+    #loading{
+    	display: inline-block;
+    	width: 2.49rem;
+    	height: 1.02rem;
+    	background: url("../static/img/loading/loadingImg.gif") no-repeat;
+    	background-size: 100%;
+    	position: relative;
+    	left: -0.3rem;
+    	margin: .97rem auto 0;
+    }
+    #hole{
+    	width: 100%;
+    	height: 3.63rem;
+    	background: url("../static/img/loading/hole.gif") no-repeat;
+    	background-size: 100%;
+    	margin-top: .68rem;
+    }
+    #textImg{
+    	display: inline-block;
+    	width: 4.35rem;
+    	height: 2.43rem;
+    	background: url("../static/img/loading/textexplain.png") no-repeat;
+    	background-size: 100%;
+    	margin-top: 1rem;
+    	z-index: 10;
     }
 </style>
 
 <body>
-    <div class="frame">
-        <div class="cont">
-        </div>
-        <div id="textImg"></div>
+    <div class="cont">
+    	<div id="loading">
+    	</div>
+    	<div id="hole">
+    	</div>
+    </div>
+    <div id="textImg">
+    	
     </div>
 </body>
 <script type="text/javascript">
-    //	定时器
-    $(document).ready(function() {
-        function jump(count) {
-            window.setTimeout(function() {
-                count--;
-                if (count > 0) {
-                    jump(count);
-                } else {
-                    window.location.href = "home.html";
-                }
-            }, 1000);
-        }
-        jump(4);
-    });
+       //	定时器
+       $(document).ready(function() {
+           function jump(count) {
+               window.setTimeout(function() {
+                   count--;
+                   if (count > 0) {
+                       jump(count);
+                   } else {
+                       window.location.href = "#";
+                   }
+               }, 1000);
+           }
+           jump(5);
+       });
 </script>
 
 </html>
