@@ -58,10 +58,10 @@
         display: inline-block;
         width: 0.67rem;
         height: 1.9rem;
-        background: url(../static/img/home/people.png) no-repeat;
+        background: url("../static/img/home/people.png") no-repeat;
         background-size: 100%;
         position: relative;
-        top: 3.3rem;
+        top: 3.4rem;
         z-index: 8;
     }
     
@@ -86,14 +86,14 @@
     .score {
         width: 100%;
         height: 2.8rem;
-        background: url(../static/img/back/score.png) no-repeat;
+        background: url("../static/img/back/score.png") no-repeat;
         background-size: 100%;
         z-index: 6;
     }
     
     .grade {
         width: 100%;
-        height: 8.65rem;
+        height: 8.85rem;
         background-color: #fff;
         position: absolute;
         top: 7.62rem;
@@ -105,7 +105,7 @@
         display: inline-block;
         width: 5.46rem;
         height: 3.06rem;
-        background: url(../static/img/back/grade_min.png) no-repeat;
+        background: url("../static/img/back/grade_min.png") no-repeat;
         background-size: 100%;
         margin-top: 0.65rem;
         z-index: 5;
@@ -114,18 +114,34 @@
     #qrCode {
         width: 100%;
         height: 7.17rem;
-        background: url(../static/img/back/QRcode.png) no-repeat;
-        background-size: 100%;
         position: relative;
-        top: 9.83rem;
+        top: 10rem;
         z-index: 10;
+        text-align: center;
+    }
+    
+    #erweimadt {
+        width: 100%;
+        height: 1.22rem;
+        margin: 0 auto;
+        position: absolute;
+        top: 16.25rem;
+        z-index: 11;
+    }
+    
+    #qrCodeG {
+        display: inline-block;
+        width: 5.1rem;
+        height: 1.21rem;
+        background: url("../static/img/back/QRcodeG.gif") no-repeat;
+        background-size: 100%;
     }
     
     .shadeVal {
         display: inline-block;
         width: 2.89rem;
         height: .85rem;
-        background: url(../static/img/back/shareBtn_up.png) no-repeat;
+        background: url("../static/img/back/shareBtn_up.png") no-repeat;
         background-size: 100%;
         position: relative;
         top: 8.25rem;
@@ -137,7 +153,7 @@
         display: inline-block;
         width: 2.89rem;
         height: .85rem;
-        background: url(../static/img/back/shareBtn_down.png) no-repeat;
+        background: url("../static/img/back/shareBtn_down.png") no-repeat;
         background-size: 100%;
         margin-top: 0.15rem;
         z-index: 15;
@@ -153,7 +169,7 @@
             <span id="userName">
 					documentdTest
 				</span>
-            <img src="../static/img/back/backHeader.png" class="bgUser" />
+            <img src="../static/img/back/backHeader.gif" class="bgUser" />
         </div>
         <!--人图片-->
         <div class="people">
@@ -161,7 +177,6 @@
         <!--分数-->
         <div class="scoreBox">
             <div class="score">
-
             </div>
         </div>
         <!--等级-->
@@ -170,7 +185,9 @@
             </div>
         </div>
         <!--二维码-->
-        <div id="qrCode">
+        <img src="../static/img/back/QRcode.png" id="qrCode">
+        <div id="erweimadt">
+            <div id="qrCodeG"></div>
         </div>
         <!--分享按钮-->
         <span class="shadeVal"></span>
@@ -189,9 +206,9 @@
             $('.shadeVal').removeClass('shadeBtn');
             //分享遮罩页面事件
             $(this).jqShade();
-            //	            $(".layerImg").on("click", function () {
-            //			        $(this).jqShade("destroy");
-            //			    });
+            $(".layerImg").on("click", function() {
+                $(this).jqShade("destroy");
+            });
         });
     })
 </script>
