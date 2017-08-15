@@ -58,7 +58,7 @@
         display: inline-block;
         width: 0.67rem;
         height: 1.9rem;
-        background: url("../static/img/home/people.gif") no-repeat;
+        background: url("../static/img/back/people.gif") no-repeat;
         background-size: 100%;
         position: relative;
         top: 3.4rem;
@@ -157,6 +157,28 @@
         margin-top: 0.15rem;
         z-index: 15;
     }
+    
+    #pageDown {
+        display: inline-block;
+        width: .5rem;
+        height: .5rem;
+        background: url("../static/img/back/page_down.png") no-repeat;
+        background-size: 100%;
+        position: fixed;
+        left: 3.33rem;
+        bottom: 0.2rem;
+        z-index: 800;
+    }
+    
+    #maodian {
+        display: inline-block;
+        width: 100%;
+        /* background-color: #000; */
+        position: absolute;
+        left: -0rem;
+        height: 100%;
+        z-index: 900;
+    }
 </style>
 
 <body>
@@ -189,12 +211,24 @@
             <div id="qrCodeG"></div>
         </div>
         <!--分享按钮-->
-        <span class="shadeVal"></span>
+        <span class="shadeVal" id="1f"></span>
+        <!--下翻页-->
+        <div id="pageDown">
+            <a href="#1f" id="maodian"></a>
+        </div>
     </div>
 </body>
 <script type="text/javascript">
     $(function() {
-        //			点击按钮事件
+        //下翻按钮事件
+        $(window).on('touchmove', function(ev) {
+            // ev.preventDefault();
+            $('#pageDown').hide();
+        });
+        $('#maodian').on('click', function(ev) {
+            $('#pageDown').hide();
+        });
+        //点击按钮事件
         $('.shadeVal').on('touchstart', function(ev) {
             ev.preventDefault();
             $('.shadeVal').addClass('shadeBtn');
